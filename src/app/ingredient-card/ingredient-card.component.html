@@ -1,0 +1,8 @@
+<mat-card [class.toggled-mat-card]="selected" (click)="onClick()">
+  <img src="{{ image }}" />
+  <mat-card-title>
+    <h1>{{ ingredient }}</h1>
+  </mat-card-title>
+  <p>{{ description }}</p>
+  <span class="ourPink">${{ price }}</span>
+</mat-card>

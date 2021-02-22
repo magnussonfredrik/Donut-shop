@@ -1,0 +1,39 @@
+.navbar {
+    height: 110px;
+    background-color: #9cfaff;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.material-icons.cart { 
+  font-size: 36px; 
+}
+
+.material-icons.pink {
+  color: #ff6990;
+}
+
+.nav-cart-item {
+  font-size: 10px!important;
+  margin-right: 5px!important;
+  color: rgb(109, 109, 109);
+}
+
+.nav-cart-price {
+  color: #ff6990;
+}
+
+.nav-cart-btn {
+  color: #ffffff;
+  background-color: #ff6990;
+}
+
+.nav-cart-btn:hover { 
+  background-color: #ff6990;
+}
+
+.block {
+  display: block;
+}

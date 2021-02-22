@@ -1,0 +1,16 @@
+<div class="right" *ngIf="order">
+    <h3>Order</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let donut of order | async; let i = index">
+            <span *ngFor="let ingredient of donut.ingredients">
+                   {{ ingredient }} &nbsp;
+            </span>
+            <button mat-icon-button (click)="delDonut(i)">
+                <mat-icon class="pink">delete</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>  
+  </div>
+<button mat-raised-button color="accent" class="btn-mg" routerLink="/">New donut</button>
+<button mat-raised-button color="accent" class="btn-mg" routerLink="/checkout">Checkout</button>

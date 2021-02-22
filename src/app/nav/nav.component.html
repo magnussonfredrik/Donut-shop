@@ -1,0 +1,23 @@
+<mat-toolbar class="navbar">
+  <img src="../../assets/img.svg" routerLink="/"/>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <i class="material-icons cart pink">
+        shopping_cart
+    </i>
+  </button>
+
+  <mat-menu #menu="matMenu">
+      <mat-list>
+      <mat-list-item *ngFor="let donut of order | async; let i = index">
+          <span class="nav-cart-item">{{ donut.ingredients }}</span>
+          <span class="example-fill-remaining-space"></span>
+          <span class="nav-cart-price">${{ donut.price }}</span>
+          <mat-divider></mat-divider>
+      </mat-list-item>
+      <button class="nav-cart-btn" mat-menu-item routerLink="/cart">
+          <span>Cart</span>
+      </button>
+      </mat-list>
+  </mat-menu>
+</mat-toolbar>

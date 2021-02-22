@@ -1,0 +1,17 @@
+<div class="right" *ngIf="order">
+  <h2>Order</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let donut of (order | async); let i = index">
+      <h2>{{i+1}}. &nbsp;</h2>
+      <span
+        class="confirmation-ingredient"
+        *ngFor="let ingredient of donut.ingredients"
+      >
+        <h2>{{ ingredient }}</h2>
+      </span>
+
+      <span class="nav-cart-price">${{ donut.price }}</span>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>

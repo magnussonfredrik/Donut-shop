@@ -1,0 +1,38 @@
+<h1>
+  Welcome to Doonutz!
+</h1>
+<p>
+  Order your donut below.
+</p>
+
+<div class="left">
+  <mat-horizontal-stepper>
+    <div *ngFor='let section of inventory'>
+      <mat-step label={{section.type}}>
+        <div *ngIf="section.type == 'Dough'">
+            <p>Select a dough.</p>
+        </div>
+        <div *ngIf="section.type == 'Glaze'">
+            <p>Select one or more glazes.</p>
+        </div>
+        <div *ngIf="section.type == 'Sprinkles'">
+            <p>Select one or more sprinkles.</p>
+        </div>
+        
+        <app-ingredient-section [ingredients]="section.ingredients" (notify)='onNotify($event)'> </app-ingredient-section>
+        
+        <div *ngIf="section.type == 'Dough'">
+            <button mat-raised-button class="float-right" color="accent" matStepperNext>Next</button>
+        </div>
+        <div *ngIf="section.type == 'Glaze'">
+            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+            <button mat-raised-button class="float-right" color="accent" matStepperNext>Next</button>
+        </div>
+        <div *ngIf="section.type == 'Sprinkles'">
+            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+            <button mat-raised-button class="float-right" color="accent" (click)="addDonut(ingredients.value)" routerLink="/cart">Add to cart</button>
+        </div>
+      </mat-step>
+    </div>
+  </mat-horizontal-stepper>
+</div>

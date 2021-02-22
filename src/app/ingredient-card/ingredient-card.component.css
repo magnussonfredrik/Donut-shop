@@ -1,0 +1,13 @@
+mat-card {
+  width: 200px;
+  border: solid 1px #ff6990;
+}
+
+.toggled-mat-card {
+  background-color: #ffe3eb;
+}
+
+mat-card > h1 {
+  color: #ff6990;
+  margin-bottom: 0px;
+}

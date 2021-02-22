@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 20px;
+  color: #ff6990;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+p {
+  color: rgb(109, 109, 109);
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.component-div {
+    background-color: white;
+    width: 92%;
+    padding: 40px;
+    margin: auto;
+    border-radius: 5px;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+.center-div {
+  margin: auto;
+}
+
+.ourPink {
+  color: #ff6990;
+}
+
+.mg-20 {
+  margin: 20px!important;
+}
+
+.mg-15 {
+  margin: 15px!important;
+}
+
+.mg-10 {
+  margin: 10px!important;
+}
+
+.mg-5 {
+  margin: 5px!important;
+}
+
+.btn-mg {
+  margin-top: 20px!important;
+  margin-bottom: 20px!important;
+  margin-right: 5px!important;
+  margin-left: 5px!important;
+}

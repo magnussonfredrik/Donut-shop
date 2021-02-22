@@ -1,0 +1,25 @@
+<p>Customer Information</p>
+<mat-divider></mat-divider>
+<div class="mg-20">
+    <div>
+    <mat-form-field class="example-full-width">
+            <input matInput placeholder="First name" [(ngModel)]="firstName" name="firstName">
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="example-full-width">
+            <input matInput placeholder="Last name"[(ngModel)]="lastName" name="lastName">
+    </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="E-mail">
+        </mat-form-field>    
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <span matPrefix>+46 &nbsp;</span>
+            <input matInput placeholder="Phone Number">
+        </mat-form-field>    
+    </div>
+</div>

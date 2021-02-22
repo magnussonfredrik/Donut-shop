@@ -1,0 +1,14 @@
+<mat-grid-list cols="4">
+  <div *ngFor='let ingredient of ingredients'>
+    <mat-grid-tile>
+      <app-ingredient-card 
+        [ingredient]="ingredient.name" 
+        [price]="ingredient.price" 
+        [description]="ingredient.description"
+        [image]="ingredient.image" 
+        (notify)='onNotify($event)'>
+      </app-ingredient-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
